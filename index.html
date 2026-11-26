@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>별조각 낙하</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>별조각 낙하 ✦</h1>
+
+    <div class="game">
+      <canvas id="board" width="300" height="540"></canvas>
+
+      <aside class="side">
+        <div class="box">
+          <h2>다음 조각</h2>
+          <canvas id="next" width="100" height="100"></canvas>
+        </div>
+        <div class="box">
+          <p>점수 <strong id="score">0</strong></p>
+          <p>줄 <strong id="lines">0</strong></p>
+          <p>단계 <strong id="level">1</strong></p>
+          <p>콤보 <strong id="combo">-</strong></p>
+        </div>
+        <button id="start">시작하기</button>
+        <div class="box help">
+          <h2>조작법</h2>
+          <p>← → 이동</p>
+          <p>↑ 회전</p>
+          <p>↓ 천천히 내리기</p>
+          <p>스페이스 바로 떨어뜨리기</p>
+          <p>P 일시정지</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 휴대폰용 터치 버튼 -->
+    <div class="touch">
+      <button data-key="ArrowLeft">←</button>
+      <button data-key="ArrowUp">⟳</button>
+      <button data-key="ArrowRight">→</button>
+      <button data-key="ArrowDown">↓</button>
+      <button data-key=" ">⤓</button>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
