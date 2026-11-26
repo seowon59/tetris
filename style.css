@@ -1,0 +1,80 @@
+/* 밤하늘 테마 */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #e8e6ff;
+  background: radial-gradient(circle at 50% 0%, #2a2660 0%, #0d0b24 70%);
+}
+
+.wrap {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+}
+
+h1 { margin: 8px 0 16px; letter-spacing: 2px; }
+h2 { font-size: 14px; margin: 0 0 8px; color: #b9b4ff; }
+
+.game {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#board {
+  background: #120f33;
+  border: 2px solid #4b44a8;
+  border-radius: 8px;
+  max-width: 65vw;
+  height: auto;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 130px;
+  text-align: left;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.box p { margin: 4px 0; font-size: 14px; }
+.help p { font-size: 12px; color: #c9c5f5; }
+
+#next { display: block; margin: 0 auto; }
+
+button {
+  font: inherit;
+  color: #fff;
+  background: #6b5cff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+button:hover { background: #8173ff; }
+
+.touch {
+  display: none;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.touch button { width: 56px; height: 48px; font-size: 20px; }
+
+/* 화면이 좁으면 터치 버튼을 보여주고 도움말은 숨김 */
+@media (max-width: 600px) {
+  .touch { display: flex; }
+  .help { display: none; }
+  .side { width: 110px; }
+}
